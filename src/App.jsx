@@ -13,6 +13,11 @@ function App() {
   const [count, Setcount] = useState(0)
   const [color, setColor] = useState('')
 
+  const minusOne = () => {
+    Setcount((count) => count - 1);
+    setColor('red');
+  }
+
 
   return (
     <div>
@@ -20,7 +25,7 @@ function App() {
       <button
         type="button"
         className='counter'
-        onClick={() => { Setcount((count) => count - 1); setColor('red') }}
+        onClick={minusOne}
       >
         -1
       </button>
